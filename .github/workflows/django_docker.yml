@@ -47,5 +47,5 @@ jobs:
         port: 22
         connect_timeout: 10s
         script: |
-          source /home/usuario/.bashrc
-          /home/usuario/update_brujula.sh
+          cd /home/docker/prueba_docker
+          docker-compose up -d
