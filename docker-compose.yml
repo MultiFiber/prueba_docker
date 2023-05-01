@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./docker/backend/dockerfile      
+      args:
+        - REQUIREMENTS=production.txt
+        - PROYECTO=brujula
+    command: /app/bin/services/system_start_docker.sh docker_local 9000
+    volumes:
+      - C:/Desarrollos/multifiber/MVP/brujula_backend/:/app
+    # env_file:
+    #     - docker/backend.env
+    ports:
+      - "9002:9000"
+    hostname:
+      "brujula"
+    networks:
+      - multifiber_net
+
+  celeryworker:
+    build:
+      context: .
+      dockerfile: ./docker/backend/dockerfile      
+      args:
+        - REQUIREMENTS=production.txt
+        - PROYECTO=brujula
+    command: celery -A config worker -l info -B --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    volumes:
+      - C:/Desarrollos/multifiber/MVP/brujula_backend/:/app
+    hostname:
+      "brujula_celery"
+    networks:
+      - multifiber_net
+
+
+networks:
+  multifiber_net:
+    driver: bridge

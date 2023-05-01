@@ -1,0 +1,35 @@
+# importing base image
+FROM python:3.8
+
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PIP_ROOT_USER_ACTION=ignore
+ARG REQUIREMENTS
+ARG PROYECTO
+
+# updating docker host or host machine
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends binutils libproj-dev gdal-bin python3-gdal \
+    && rm -rf /var/lib/apt/lists/*
+
+# changing current working directory to /usr/src/app
+RUN mkdir /app
+
+# copying all the files to present working directory
+COPY . /app
+
+WORKDIR /app/${PROYECTO}/
+RUN cd /app/${PROYECTO}/
+# installing dependency in container
+#RUN pip install --root-user-action=ignore --upgrade pip  
+RUN pip install --upgrade pip && pip install -r /app/requirements/${REQUIREMENTS}
+#RUN pip install -r /app/requirements/test.txt
+
+
+# informing Docker that the container listens on the
+# specified network ports at runtime i.e 9000.
+EXPOSE 9000
+
+
+# running server
+CMD ["python", "manage.py", "runserver", "0.0.0.0:9000","--settings=config.settings.docker_local"]

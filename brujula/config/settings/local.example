@@ -1,0 +1,63 @@
+from .base import *  # noqa
+from os.path import dirname, join
+
+ENVIROMENT = "LOCAL"
+DEBUG = True
+
+INSTALLED_APPS.insert(0,'grappelli')
+INSTALLED_APPS.append('drf_yasg')
+
+TEMPLATES[0]['OPTIONS']['libraries'] = {'staticfiles':'django.templatetags.static'}
+
+ALLOWED_HOSTS = ["*"]
+
+STATIC_ROOT = "static/"
+MEDIA_ROOT = "media/"
+
+BASE_DIR_LOG = "../logs"
+
+
+LOGGING = {
+    "version": 1,
+    "formatters": {
+        'sqlformat': {
+            'format': '{asctime} {message}',
+            'style': '{'
+        },
+        "verbose": {
+            "format": "%(levelname)s:%(name)s: %(message)s"
+        },
+       
+    },    
+    "handlers": {
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
+            "formatter": "verbose",
+        },
+    
+        "file": {
+            "level": "INFO",
+            #"class": "logging.FileHandler",
+            "class":"logging.handlers.RotatingFileHandler",
+            "formatter": "verbose",
+            'maxBytes': 1024*1024*1, # 1 MB
+            "filename": join(BASE_DIR_LOG, "debug_django.log"),
+        },
+    },
+    "loggers": {
+        "django.request": {
+            "handlers": ["file", "console"],
+            "level": "DEBUG",
+            "propagate": False,
+        },
+        "matplotlib": {
+            "handlers": ["file", "console"],
+            "level": "ERROR",
+            "propagate": False,
+        },      
+        "": {"level": "DEBUG", "handlers": ["console"],},
+    },
+}
+
+ROOT_URLCONF = 'config.urls_admin'

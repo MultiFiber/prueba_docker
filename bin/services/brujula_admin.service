@@ -1,0 +1,15 @@
+[Unit]
+Description=Brujula backend daemon
+After=network.target
+
+[Service]
+Type=simple
+User=brujula_user
+Group=brujula_user
+WorkingDirectory=/home/brujula_user/brujula_backend/bin/services/
+ExecStart=/bin/bash system_start.sh admin 9000
+EnvironmentFile=/home/brujula_user/brujula_backend/brujula/.env
+
+[Install]
+WantedBy=multi-user.target
+

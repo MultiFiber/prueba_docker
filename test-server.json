@@ -1,0 +1,209 @@
+{
+   "client":"Thunder Client",
+   "collectionName":"Brujula",
+   "dateExported":"2022-05-12T12:04:14.203Z",
+   "version":"1.1",
+   "folders":[
+      {
+         "_id":"9eec58d3-c7d9-4be3-a9a5-fb472f163d89",
+         "name":"auth",
+         "containerId":"",
+         "created":"2022-03-27T19:12:59.812Z",
+         "sortNum":20000
+      },
+      {
+         "_id":"9da925d2-4c61-49cd-bc16-232d44c74215",
+         "name":"os",
+         "containerId":"",
+         "created":"2022-04-26T14:18:42.017Z",
+         "sortNum":30000
+      }
+   ],
+   "requests":[
+      {
+         "_id":"0d3d5c78-27c5-41ad-9572-f6e6d8125d75",
+         "colId":"8bb3d135-ef28-4a4f-a48f-c66e11706586",
+         "containerId":"9eec58d3-c7d9-4be3-a9a5-fb472f163d89",
+         "name":"/singin",
+         "url":"http://localhost:8000/v1/singin",
+         "method":"POST",
+         "sortNum":30000,
+         "created":"2022-03-27T19:13:10.218Z",
+         "modified":"2022-03-30T14:57:45.640Z",
+         "headers":[
+            
+         ],
+         "params":[
+            
+         ],
+         "body":{
+            "type":"json",
+            "raw":"{\n    \"username\":\"dayrons\",\n    \"password\":\"1234\"\n}",
+            "form":[
+               
+            ]
+         },
+         "tests":[
+            
+         ]
+      },
+      {
+         "_id":"8aa6f060-9cee-4167-b52f-a358868415ee",
+         "colId":"8bb3d135-ef28-4a4f-a48f-c66e11706586",
+         "containerId":"9eec58d3-c7d9-4be3-a9a5-fb472f163d89",
+         "name":"/signup",
+         "url":"http://localhost:8000/v1/signup",
+         "method":"POST",
+         "sortNum":40000,
+         "created":"2022-03-28T00:36:35.174Z",
+         "modified":"2022-03-30T14:40:44.032Z",
+         "headers":[
+            
+         ],
+         "params":[
+            
+         ],
+         "body":{
+            "type":"json",
+            "raw":"{\n    \"username\":\"dayrons\",\n    \"email\":\"dayrons@example.com\",\n    \"password\":\"1234\"\n}",
+            "form":[
+               
+            ]
+         },
+         "tests":[
+            
+         ]
+      },
+      {
+         "_id":"4e41a3db-763f-4472-829b-3045f8331cf1",
+         "colId":"8bb3d135-ef28-4a4f-a48f-c66e11706586",
+         "containerId":"9da925d2-4c61-49cd-bc16-232d44c74215",
+         "name":"/os",
+         "url":"http://localhost:8000/api/v1/ostype",
+         "method":"GET",
+         "sortNum":80000,
+         "created":"2022-04-27T18:05:17.287Z",
+         "modified":"2022-05-11T19:46:34.428Z",
+         "headers":[
+            
+         ],
+         "params":[
+            
+         ],
+         "tests":[
+            
+         ]
+      },
+      {
+         "_id":"e37322fc-d401-4496-827c-795e30f92717",
+         "colId":"8bb3d135-ef28-4a4f-a48f-c66e11706586",
+         "containerId":"9da925d2-4c61-49cd-bc16-232d44c74215",
+         "name":"/os",
+         "url":"http://localhost:8000/api/v1/ostype",
+         "method":"POST",
+         "sortNum":90000,
+         "created":"2022-04-27T18:34:28.101Z",
+         "modified":"2022-05-11T19:46:55.184Z",
+         "headers":[
+            
+         ],
+         "params":[
+            
+         ],
+         "body":{
+            "type":"json",
+            "raw":"{\n    \"operador\": 1,\n    \"name\": \"prueba2\",\n    \"color\": \"rgb(0,0,0,0)\"\n}",
+            "form":[
+               
+            ]
+         },
+         "tests":[
+            
+         ]
+      },
+      {
+         "_id":"9e50ee5b-96ac-431d-8e64-e61c6e847023",
+         "colId":"8bb3d135-ef28-4a4f-a48f-c66e11706586",
+         "containerId":"9da925d2-4c61-49cd-bc16-232d44c74215",
+         "name":"/os",
+         "url":"http://localhost:8000/api/v1/ostype",
+         "method":"PUT",
+         "sortNum":100000,
+         "created":"2022-04-27T19:01:27.077Z",
+         "modified":"2022-05-11T19:47:02.382Z",
+         "headers":[
+            
+         ],
+         "params":[
+            
+         ],
+         "tests":[
+            
+         ]
+      },
+      {
+         "_id":"f097705c-9ce8-468e-8e63-6fa87c02ddde",
+         "colId":"8bb3d135-ef28-4a4f-a48f-c66e11706586",
+         "containerId":"9da925d2-4c61-49cd-bc16-232d44c74215",
+         "name":"/os",
+         "url":"http://localhost:8000/api/v1/ostype",
+         "method":"DELETE",
+         "sortNum":110000,
+         "created":"2022-04-27T19:01:44.906Z",
+         "modified":"2022-05-11T19:47:09.655Z",
+         "headers":[
+            
+         ],
+         "params":[
+            
+         ],
+         "tests":[
+            
+         ]
+      },
+      {
+         "_id":"3416d21e-ec0b-4fba-b87a-5d4861e29c50",
+         "colId":"8bb3d135-ef28-4a4f-a48f-c66e11706586",
+         "containerId":"9eec58d3-c7d9-4be3-a9a5-fb472f163d89",
+         "name":"/signout",
+         "url":"http://localhost:8000/v1/signout?token=6f6d424c1a46d2282b17a8a42c89f331f8673015",
+         "method":"GET",
+         "sortNum":120000,
+         "created":"2022-05-05T03:31:41.210Z",
+         "modified":"2022-05-05T03:40:27.580Z",
+         "headers":[
+            
+         ],
+         "params":[
+            {
+               "name":"token",
+               "value":"6f6d424c1a46d2282b17a8a42c89f331f8673015",
+               "isPath":false
+            }
+         ],
+         "tests":[
+            
+         ]
+      },
+      {
+         "_id":"a21738b7-d3dd-465f-8ce2-88f2a387c45f",
+         "colId":"8bb3d135-ef28-4a4f-a48f-c66e11706586",
+         "containerId":"9da925d2-4c61-49cd-bc16-232d44c74215",
+         "name":"/history",
+         "url":"http://localhost:8000/api/v1/ostype/history/1",
+         "method":"GET",
+         "sortNum":130000,
+         "created":"2022-05-05T04:41:45.543Z",
+         "modified":"2022-05-12T10:27:53.544Z",
+         "headers":[
+            
+         ],
+         "params":[
+            
+         ],
+         "tests":[
+            
+         ]
+      }
+   ]
+}

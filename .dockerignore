@@ -1,0 +1,17 @@
+docs/*
+.git/
+*/node_modules*
+docker/
+.gitignore
+LICENSE
+VERSION
+README.md
+CHANGELOG.md
+Makefile
+docker-compose.yml
+*/htmlcov*
+.ipynb_checkpoints
+Insomnia.json
+.github
+docker-compose-development.yml
+docker-compose-windows.yml

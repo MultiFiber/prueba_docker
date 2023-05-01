@@ -1,0 +1,70 @@
+# ignore local_settings.py
+local_settings.py
+*local.py
+
+# postgres database
+/data/
+/docker/data
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Django stuff:
+*.log
+
+# dotenv
+.env
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# PostgreSQL sockets
+.s.PGSQL*
+
+# Redis
+redis.pid
+
+# Media files for development
+media/
+static/
+
+.vscode
+.ipynb_checkpoints

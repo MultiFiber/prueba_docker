@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        .card {
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            background: linear-gradient(45deg, #00101c, #01060a);
+            color: rgb(255, 255, 255);
+            box-shadow: 0 0 3px #000;
+            margin: auto;
+        }
+
+        .card h3 {
+            color: rgb(255, 205, 54);
+        }
+
+        .btn {
+            padding: .5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #4dd0ff;
+            color: #000 !important;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="card" style="width: 14rem;">
+            <div class="card-body">
+                <h2 class="card-title">Cambiar Contraseña</h2>
+                <h3 class="card-subtitle mb-2 text-muted">¡Hola {{user}}!</h3>
+                <p class="card-text">Hemos recibido una solicitud de Cambio en tu Contraseña, te indicamos que
+                    selecciones el botón a continuacion para continuar con el proceso. (Si no has sido tu, por favor
+                    contacta a nuestro Equipo de Soporte).</p>
+                <a class="btn btn-primary" href="{{link}}" role="button">Cambiar Contraseña</a>
+            </div>
+        </div>
+    </form>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+</html>
