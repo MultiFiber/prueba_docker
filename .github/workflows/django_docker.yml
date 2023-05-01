@@ -2,7 +2,7 @@ name: Django Deploy CI
 
 on:
   push:
-    branches: [ feature/for_servers, development, main]
+    branches: [ feature/for_servers, development, master]
   pull_request:
     branches: [ feature/for_servers, development, main]
 
